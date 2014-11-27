@@ -1,0 +1,74 @@
+<div class="page">
+    <h1>Linkedin JS API Example</h1>
+
+    <ul id="js-messages">
+        <li>Messages from our code will appear here.</li>
+    </ul>
+</div>
+
+    <!-- The following displays a Linkedin Login button
+     The callback in data-onAuth will be called when the user is logged in
+       The callback in data-onLogout will be called when the user logs out 
+      -->
+    <script type="IN/Login"
+            data-onAuth="Linkedin.onAuthCallback"
+            data-onLogout="Linkedin.onLogoutCallback"
+    >
+        <!-- This is just  a simple trick to pass the user's data to our script
+       without having to do another API call.
+      -->
+        <img src="http://dummyimage.com/1x1/F.gif" onload="
+        Linkedin.userData({
+              id        : '<?js= id ?>'
+            , firstName : '<?js= firstName ?>'
+            , lastName  : '<?js= lastName ?>'
+            , headline  : '<?js= headline ?>'
+            , pictureUrl: '<?js= pictureUrl ?>'
+        });
+        " />
+    </script>
+<!-- 
+   This loads the Linkedin JS API.
+   The onLoad callback is called when the Linkedin JS API has been loaded.
+-->
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+  api_key: 1aoxug1iqf92
+  onLoad:  Linkedin.init
+</script>
+<div class="page">
+    <h1>Linkedin JS API Example</h1>
+
+    <ul id="js-messages">
+        <li>Messages from our code will appear here.</li>
+    </ul>
+</div>
+
+    <!-- The following displays a Linkedin Login button
+     The callback in data-onAuth will be called when the user is logged in
+       The callback in data-onLogout will be called when the user logs out 
+      -->
+    <script type="IN/Login"
+            data-onAuth="Linkedin.onAuthCallback"
+            data-onLogout="Linkedin.onLogoutCallback"
+    >
+        <!-- This is just  a simple trick to pass the user's data to our script
+       without having to do another API call.
+      -->
+        <img src="http://dummyimage.com/1x1/F.gif" onload="
+        Linkedin.userData({
+              id        : '<?js= id ?>'
+            , firstName : '<?js= firstName ?>'
+            , lastName  : '<?js= lastName ?>'
+            , headline  : '<?js= headline ?>'
+            , pictureUrl: '<?js= pictureUrl ?>'
+        });
+        " />
+    </script>
+<!-- 
+   This loads the Linkedin JS API.
+   The onLoad callback is called when the Linkedin JS API has been loaded.
+-->
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+  api_key: 1aoxug1iqf92
+  onLoad:  Linkedin.init
+</script>

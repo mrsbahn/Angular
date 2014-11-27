@@ -1,0 +1,38 @@
+<html ng-app>
+
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+ 
+</head>
+<body style = "padding: 50px">
+	<div   ng-init="albumNames=[
+	{name:'Madrid',title:'Weekend in Madrid',date:'2014', describtion: 'At Madrid'},
+	{name:'London',title:'Weekend in London',date:'2013',describtion: 'At London'},
+	{name:'Berlin',title:'Weekend in Berlin',date:'2011',describtion: 'Berlin'},
+	{name:'Bkk',title:'Weekend in Bkk',date:'2012',describtion: 'At Bangkok'},
+	{name:'Paris',title:'Weekend in Paris',date:'2014',describtion: 'At Paris'}
+
+	]"> 
+	<p> There are {{albumNames.length}} albums available to view:</p>
+	<p> 
+	<input type="text"  ng-model="searchFor"  size="30" />
+	</p>
+	<div class="album panel panel-primary" ng-repeat="album  in albumNames | filter:searchFor | orderBy:'date' "> 
+	
+	<div class="panel-heading"> 
+	<div style="float:right"> {{album.date}}</div>
+	{{album.title  }}   </div> 	
+
+	<div style="padding:5px"> {{album.describtion }}</div>
+	
+	</div>
+
+
+	</div>
+
+</body>
+</html>
